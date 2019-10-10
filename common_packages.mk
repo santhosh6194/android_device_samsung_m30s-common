@@ -162,6 +162,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-impl:32
 
+# SYSCONFIG #
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/config/sysconfig/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+    
 # THERMAL #
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.samsung
