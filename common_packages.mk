@@ -136,6 +136,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/config/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
     
+# PUBLIC LIBRARIES #
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/config/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+    
 # RECOVERY #
 PRODUCT_PACKAGES += \
     init.recovery.exynos9611.rc
