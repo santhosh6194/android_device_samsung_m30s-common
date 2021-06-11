@@ -1,0 +1,7 @@
+# file.te
+
+# ROOT
+# /carrier /omr /spu 
+type carrier_file, file_type;
+type omr_file, file_type;
+type spu_file, file_type;
