@@ -62,6 +62,10 @@ TARGET_COPY_OUT_SYSTEM := system
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# HIDL #
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+
 # KERNEL #
 TARGET_KERNEL_SOURCE = kernel/samsung/m30s-common
 TARGET_KERNEL_CLANG_COMPILE := true
