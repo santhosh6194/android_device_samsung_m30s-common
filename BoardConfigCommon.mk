@@ -25,6 +25,9 @@ TARGET_BOARD_PLATFORM_GPU := mali-g72
 
 TARGET_NO_BOOTLOADER := true
 
+# Enable hardware/samsung #
+BOARD_VENDOR := samsung
+
 # PROCESSOR #
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
