@@ -6,7 +6,12 @@ genfscon debugfs /mali/mem/            u:object_r:debugfs_mali_mem:s0
 genfscon debugfs /ion                  u:object_r:debugfs_ion:s0
 genfscon debugfs /dma_buf              u:object_r:debugfs_ion_dma:s0
 
+# CLASS #
+genfscon sysfs /class/video4linux                                                                              u:object_r:sysfs_v4l:s0
+
 # DEVICES #
+genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video6/name                                         u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video7/name                                         u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-fuelgauge/power_supply/sm5713-fuelgauge/type u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-charger/power_supply/sm5713-charger/type     u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-charger/power_supply/otg/type                u:object_r:sysfs_battery:s0

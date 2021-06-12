@@ -1,6 +1,7 @@
 ### DATA ###
-/data/vendor/camera(/.*)?                    u:object_r:camera_vendor_data_file:s0
 /data/camera(/.*)?                           u:object_r:camera_data_file:s0
+/data/vendor/media(/.*)?                     u:object_r:media_vendor_data_file:s0
+/data/vendor/camera(/.*)?                    u:object_r:camera_vendor_data_file:s0
 
 ### DEV ###
 # BLUETOOTH #
