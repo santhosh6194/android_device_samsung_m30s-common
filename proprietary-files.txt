@@ -167,6 +167,10 @@ vendor/lib64/egl/libGLES_mali.so
 vendor/lib/libion_exynos.so
 vendor/lib64/libion_exynos.so
 
+# KEYMASTER #
+vendor/lib64/libkeymaster_helper.so
+vendor/lib64/libskeymaster4device.so
+
 # TEEGRIS #
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon
