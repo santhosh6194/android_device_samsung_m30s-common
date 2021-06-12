@@ -70,6 +70,13 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl:64 \
     android.hardware.health@2.1-service
 
+# HIDL #
+PRODUCT_PACKAGES += \
+   libhidltransport \
+   libhidltransport.vendor \
+   libhwbinder \
+   libhwbinder.vendor
+   
 # INIT #
 PRODUCT_PACKAGES += \
     init.exynos9611.rc \
