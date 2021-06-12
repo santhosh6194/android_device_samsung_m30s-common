@@ -121,6 +121,14 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libmm-omxcore \
     libstagefrighthw
+
+# POWER #
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.3-service.samsung-libperfmgr \
+    libperfmgr.vendor:64
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/config/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
     
 # RECOVERY #
 PRODUCT_PACKAGES += \
