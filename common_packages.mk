@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
     libkeymaster4_1support.vendor:64
 
+# LIGHT #
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.samsung
+
 # INIT #
 PRODUCT_PACKAGES += \
     init.exynos9611.rc \

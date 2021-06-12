@@ -10,3 +10,5 @@ genfscon debugfs /dma_buf              u:object_r:debugfs_ion_dma:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-fuelgauge/power_supply/sm5713-fuelgauge/type u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-charger/power_supply/sm5713-charger/type     u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-charger/power_supply/otg/type                u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/148e0000.dsim/backlight/panel/max_brightness				   u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/platform/148e0000.dsim/backlight/panel/brightness					   u:object_r:sysfs_backlight_writable:s0
