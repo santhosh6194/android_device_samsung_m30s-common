@@ -9,3 +9,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.exynos9611.rc
     ueventd.recovery.exynos9611.rc
+    
+# USB #
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.1-service.typec
