@@ -70,3 +70,83 @@ vendor/firmware/SoundBoosterParam.bin
 
 # BLUETOOTH #
 system/lib64/libaptX_encoder.so
+
+# CAMERA #
+vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service
+vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service.rc
+vendor/lib/hw/camera.exynos9611.so
+vendor/lib/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
+vendor/lib/camera.device@1.0-impl.so
+vendor/lib/camera.device@3.2-impl.so
+vendor/lib/camera.device@3.3-impl.so
+vendor/lib/camera.device@3.4-impl.so
+vendor/lib/camera.device@3.5-impl.so
+vendor/lib/vendor.samsung.camera.device@5.0-impl.so
+vendor/lib/vendor.samsung.hardware.camera.device@5.0.so
+vendor/lib/vendor.samsung.hardware.camera.provider@4.0.so
+vendor/lib/vendor.samsung.hardware.camera.provider@4.0-legacy.so
+vendor/lib64/hw/camera.exynos9611.so
+vendor/lib64/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
+vendor/lib64/camera.device@1.0-impl.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib64/camera.device@3.5-impl.so
+vendor/lib64/vendor.samsung.camera.device@5.0-impl.so
+vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
+vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
+vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
+
+# CAMERA DEPENDENCIES #
+vendor/lib/libSEF.quram.so
+vendor/lib/libacryl.so
+vendor/lib/libacryl_plugin_slsi_hdr10.so
+vendor/lib/libcsc.so
+vendor/lib/libdualcam_refocus_image.so
+vendor/lib/libdualcam_refocus_video.so
+vendor/lib/libexynoscamera3.so
+vendor/lib/libgiantmscl.so
+vendor/lib/libhwjpeg.so
+vendor/lib/libsensorlistener.so
+vendor/lib/libstagefrighthw.so
+vendor/lib/libuniapi.so
+vendor/lib/libuniplugin.so
+vendor/lib64/libSEF.quram.so
+vendor/lib64/libcsc.so
+vendor/lib64/libdualcam_refocus_image.so
+vendor/lib64/libexynoscamera3.so
+vendor/lib64/libgiantmscl.so
+vendor/lib64/libhwjpeg.so
+vendor/lib64/libsensorlistener.so
+vendor/lib64/libstagefrighthw.so
+vendor/lib64/libuniapi.so
+vendor/lib64/libuniplugin.so
+vendor/lib64/libvkmanager_vendor.so
+
+# CAMERA PLUGIN #
+vendor/lib/libBeauty_v4.camera.samsung.so
+vendor/lib/libDualCamBokehCapture.camera.samsung.so
+vendor/lib/libFacePreProcessing.camera.samsung.so
+vendor/lib/libHandGesture.camera.samsung.so
+vendor/lib/libHpr_RecGAE_cvFeature_v1.0.camera.samsung.so
+vendor/lib/libHprFace_GAE_api.camera.samsung.so
+vendor/lib/libLocalTM_capture_core.camera.samsung.so
+vendor/lib/libLocalTM_wrapper.camera.samsung.so
+vendor/lib/libOpenCv.camera.samsung.so
+vendor/lib/libswldc_capture_core.camera.samsung.so
+vendor/lib64/libBeauty_v4.camera.samsung.so
+vendor/lib64/libDLInterface.camera.samsung.so
+vendor/lib64/libDualCamBokehCapture.camera.samsung.so
+vendor/lib64/libFacePreProcessing.camera.samsung.so
+vendor/lib64/libHandGesture.camera.samsung.so
+vendor/lib64/libHpr_RecGAE_cvFeature_v1.0.camera.samsung.so
+vendor/lib64/libHprFace_GAE_api.camera.samsung.so
+vendor/lib64/libLocalTM_capture_core.camera.samsung.so
+vendor/lib64/libLocalTM_wrapper.camera.samsung.so
+vendor/lib64/libOpenCv.camera.samsung.so
+vendor/lib64/libswldc_capture_core.camera.samsung.so
+
+# CAMERA FIRMWARE #
+vendor/firmware/dual_cal_wide_sub.bin
+# Copied by vendor_init which needs read access
+system/media/fruc_kernels.exynos9610.bin:vendor/firmware/fruc_kernels.exynos9610.bin

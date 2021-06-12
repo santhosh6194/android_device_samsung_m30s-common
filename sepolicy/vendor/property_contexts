@@ -2,3 +2,10 @@
 
 # BLUETOOTH #
 vendor.bluetooth_fw_ver    u:object_r:vendor_bluetooth_prop:s0
+
+# CAMERA #
+persist.vendor.sys.camera.       u:object_r:vendor_camera_prop:s0
+persist.vendor.hifills.          u:object_r:vendor_camera_prop:s0
+persist.vendor.dualCam.          u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.           u:object_r:vendor_camera_prop:s0
+vendor.hal.camera.               u:object_r:vendor_camera_prop:s0
