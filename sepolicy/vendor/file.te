@@ -3,6 +3,12 @@
 # DATA #
 type camera_vendor_data_file, file_type, data_file_type;
 
+# DEBUGFS #
+type debugfs_mali, fs_type, debugfs_type;
+type debugfs_mali_mem, fs_type, debugfs_type;
+type debugfs_ion, fs_type, debugfs_type;
+type debugfs_ion_dma, fs_type, debugfs_type;
+
 # ROOT #
 # /carrier /omr /spu # 
 type carrier_file, file_type;

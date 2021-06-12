@@ -155,6 +155,18 @@ system/media/fruc_kernels.exynos9610.bin:vendor/firmware/fruc_kernels.exynos9610
 vendor/lib/hw/gatekeeper.exynos9611.so
 vendor/lib64/hw/gatekeeper.exynos9611.so
 
+# GRALLOC #
+vendor/lib/hw/gralloc.exynos9611.so
+vendor/lib64/hw/gralloc.exynos9611.so
+
+# GRAPICS MALI #
+vendor/lib/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_mali.so
+
+# ION #
+vendor/lib/libion_exynos.so
+vendor/lib64/libion_exynos.so
+
 # TEEGRIS #
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon
