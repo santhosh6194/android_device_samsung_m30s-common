@@ -114,6 +114,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/recovery.fstab
 
+# RENDERSCRIPT #
+OVERRIDE_RS_DRIVER := libRSDriverArm.so
+
 # SEPOLICY #
 include device/lineage/sepolicy/exynos/sepolicy.mk
 BOARD_SEPOLICY_TEE_FLAVOR := teegris

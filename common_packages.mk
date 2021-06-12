@@ -134,6 +134,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.recovery.exynos9611.rc
     ueventd.recovery.exynos9611.rc
+
+# RENDERSCRIPT #
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
     
 # USB #
 PRODUCT_PACKAGES += \
