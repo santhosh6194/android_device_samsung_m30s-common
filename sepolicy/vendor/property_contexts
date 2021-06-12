@@ -1,0 +1,4 @@
+# property_contexts
+
+# BLUETOOTH #
+vendor.bluetooth_fw_ver    u:object_r:vendor_bluetooth_prop:s0
