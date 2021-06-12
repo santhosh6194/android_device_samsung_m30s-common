@@ -76,7 +76,14 @@ PRODUCT_PACKAGES += \
    libhidltransport.vendor \
    libhwbinder \
    libhwbinder.vendor
-   
+
+# INIT #
+PRODUCT_PACKAGES += \
+    init.exynos9611.rc \
+    init.exynos9611.usb.rc \
+    fstab.exynos9611 \
+    ueventd.exynos9611.rc  
+
 # KEYMASTER #
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
@@ -86,13 +93,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.samsung
 
-# INIT #
+# MEMTRACK #
 PRODUCT_PACKAGES += \
-    init.exynos9611.rc \
-    init.exynos9611.usb.rc \
-    fstab.exynos9611 \
-    ueventd.exynos9611.rc
-
+    android.hardware.memtrack@1.0-impl:64 \
+    android.hardware.memtrack@1.0-service
+    
 # RECOVERY #
 PRODUCT_PACKAGES += \
     init.recovery.exynos9611.rc

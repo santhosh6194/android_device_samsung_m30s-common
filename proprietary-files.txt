@@ -171,6 +171,10 @@ vendor/lib64/libion_exynos.so
 vendor/lib64/libkeymaster_helper.so
 vendor/lib64/libskeymaster4device.so
 
+# SAMSUNG_SLSI MEMTRACK #
+vendor/lib64/hw/memtrack.exynos9611.so
+vendor/lib/hw/memtrack.exynos9611.so
+
 # TEEGRIS #
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon

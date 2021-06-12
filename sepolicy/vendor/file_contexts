@@ -13,6 +13,9 @@
 /dev/mali[0-9]                               u:object_r:gpu_device:s0
 /dev/g2d                                     u:object_r:graphics_device:s0
 
+# SECMEM #
+/dev/s5p-smem                                u:object_r:secmem_device:s0
+
 ### ROOT ###
 /carrier(/.*)?                               u:object_r:carrier_file:s0
 /omr(/.*)?                                   u:object_r:omr_file:s0
