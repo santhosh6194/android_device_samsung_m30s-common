@@ -50,6 +50,11 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-legacy \
     Snap
 
+# GATEKEEPER #
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl:64 \
+    android.hardware.gatekeeper@1.0-service
+    
 # INIT #
 PRODUCT_PACKAGES += \
     init.exynos9611.rc \
