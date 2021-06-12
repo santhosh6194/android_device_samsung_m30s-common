@@ -176,6 +176,40 @@ vendor/lib64/libion_exynos.so
 vendor/lib64/libkeymaster_helper.so
 vendor/lib64/libskeymaster4device.so
 
+# OMX #
+vendor/lib/libepicoperator.so
+vendor/lib/libExynosOMX_Core.so
+vendor/lib/libExynosOMX_Resourcemanager.so
+vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
+vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
+vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
+vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so
+vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so
+vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so
+vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so
+vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
+vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
+vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
+vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
+vendor/lib64/libepicoperator.so
+vendor/lib64/libExynosOMX_Core.so
+vendor/lib64/libExynosOMX_Resourcemanager.so
+vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.HEVC.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.VP8.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
+
+# OMX FIRMWARE #
+vendor/firmware/fimc_is_lib.bin
+vendor/firmware/fimc_is_rta.bin
+
 # SAMSUNG_SLSI MEMTRACK #
 vendor/lib64/hw/memtrack.exynos9611.so
 vendor/lib/hw/memtrack.exynos9611.so

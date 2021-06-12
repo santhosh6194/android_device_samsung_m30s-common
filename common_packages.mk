@@ -107,6 +107,20 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl:64 \
     android.hardware.memtrack@1.0-service
+
+# OMX #
+PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVenc \
+    libc2dcolorconvert \
+    libmm-omxcore \
+    libstagefrighthw
     
 # RECOVERY #
 PRODUCT_PACKAGES += \
