@@ -67,3 +67,6 @@ vendor/firmware/calliope_iva.bin
 vendor/firmware/calliope_sram.bin
 vendor/firmware/dax_param.bin
 vendor/firmware/SoundBoosterParam.bin
+
+# BLUETOOTH #
+system/lib64/libaptX_encoder.so

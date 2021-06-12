@@ -1,4 +1,7 @@
-### ROOT
+# BLUETOOTH #
+/dev/scsc_h4_0                               u:object_r:bt_device:s0
+
+# ROOT #
 /carrier(/.*)?                               u:object_r:carrier_file:s0
 /omr(/.*)?                                   u:object_r:omr_file:s0
 /spu(/.*)?                                   u:object_r:spu_file:s0
