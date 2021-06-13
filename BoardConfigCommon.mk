@@ -124,6 +124,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 # RENDERSCRIPT #
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
+# RIL #
+ENABLE_VENDOR_RIL_SERVICE := true
+
 # SEPOLICY #
 include device/lineage/sepolicy/exynos/sepolicy.mk
 BOARD_SEPOLICY_TEE_FLAVOR := teegris

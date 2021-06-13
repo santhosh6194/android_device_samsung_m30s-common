@@ -29,6 +29,10 @@
 /sys/devices/virtual/camera/rear/ssrm_camera_info             u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
 
+# NET #
+/sys/devices/platform/119c0000.scsc_wifibt/net(/.*)/mtu       u:object_r:sysfs_net_mtu_writable:s0
+/sys/devices/virtual/net(/.*)/mtu                             u:object_r:sysfs_net_mtu_writable:s0
+
 # SENSORS #
 /sys/devices/platform/11980000.contexthub(/.*)                u:object_r:sysfs_iio:s0
 /sys/devices/platform/11c30000.adc(/.*)                       u:object_r:sysfs_iio:s0

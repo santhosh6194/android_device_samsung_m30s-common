@@ -1,0 +1,5 @@
+# cbd.te
+
+allow cbd self:capability2 block_suspend;
+
+allow cbd sysfs_pdata:file { read open write };

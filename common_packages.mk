@@ -82,7 +82,9 @@ PRODUCT_PACKAGES += \
     init.exynos9611.rc \
     init.exynos9611.usb.rc \
     fstab.exynos9611 \
-    ueventd.exynos9611.rc  
+    ueventd.exynos9611.rc  \
+    init.vendor.rilchip.rc \
+    init.vendor.rilcommon.rc
 
 # KEYMASTER #
 PRODUCT_PACKAGES += \
