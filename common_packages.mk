@@ -144,6 +144,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.samsung-multihal \
     libsensorndkbridge
 
+# SHIMS #
+PRODUCT_PACKAGES += \
+    libshim_sensorndkbridge
+    
 # SOUNDTRIGGER #
 PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-impl:32
