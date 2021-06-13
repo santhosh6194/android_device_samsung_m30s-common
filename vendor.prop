@@ -1,0 +1,19 @@
+# AUDIO #
+audio.offload.min.duration.secs=30
+aaudio.mmap_policy=2
+aaudio.mmap_exclusive_policy=2
+aaudio.hw_burst_min_usec=2000
+af.fast_track_multiplier=1
+
+# DALVIK #
+dalvik.vm.lockprof.threshold=500
+
+# DEVELOPER SETTINGS #
+ro.frp.pst=/dev/block/persistent
+
+# KEYSTORE #
+ro.hardware.keystore=mdfpp
+ro.security.keystore.keytype=sak,gak
+
+# OPENGLES #
+ro.opengles.version=196610

@@ -1,0 +1,9 @@
+# SAMSUNG SPECIFIC #
+ro.product_ship=true
+ro.vendor.cscsupported=1
+ro.cmc.device_type=pd
+ro.cmc.version=2.0
+
+# WIFI #
+wifi.direct.interface=p2p0
+ro.boot.wificountrycode=00
