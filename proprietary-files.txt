@@ -253,6 +253,22 @@ vendor/bin/hw/vendor.samsung_slsi.hardware.configstore@1.0-service
 vendor/etc/init/vendor.samsung_slsi.hardware.configstore@1.0-service.rc
 vendor/lib64/vendor.samsung_slsi.hardware.configstore@1.0.so
 
+# SAMSUNG_SLSI FIRMWARE #
+vendor/firmware/CC_DRAM_CODE_FLASH.bin
+vendor/firmware/CC_DTCM_CODE_FLASH.bin
+vendor/firmware/CC_ITCM_CODE_FLASH.bin
+vendor/firmware/rtdsp.bin
+vendor/firmware/rtdsp_param.bin
+vendor/firmware/setfile_3p8sp.bin
+vendor/firmware/setfile_gc5035.bin
+vendor/firmware/setfile_gm2.bin
+vendor/firmware/kernel_bin_enf.bin
+vendor/firmware/kernel_bin_inception.bin
+vendor/firmware/kernel_bin_mfb.bin
+vendor/firmware/kernel_bin_mobile_vgg.bin
+vendor/firmware/kernel_bin_nfd.bin
+vendor/firmware/setfile_4ha.bin
+
 # SAMSUNG_SLSI HWC #
 system/lib/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
 system/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
