@@ -86,6 +86,10 @@ PRODUCT_PACKAGES += \
     init.vendor.rilchip.rc \
     init.vendor.rilcommon.rc
 
+# KEYLAYOUT #
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/config/keylayout/gpio_keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio_keys.kl
+
 # KEYMASTER #
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
