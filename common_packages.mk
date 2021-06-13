@@ -143,6 +143,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.samsung-multihal \
     libsensorndkbridge
+
+# SOUNDTRIGGER #
+PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.0-impl:32
     
 # USB #
 PRODUCT_PACKAGES += \
