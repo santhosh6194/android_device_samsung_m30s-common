@@ -323,6 +323,19 @@ vendor/tee/driver/00000000-0000-0000-0000-4d53546d7374
 vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
 vendor/tee/tui/resolution_common/ID00000100
 
+# WIDEVINE #
+system/lib/vendor.samsung.hardware.security.widevine.keyprov@1.0.so
+system/lib64/vendor.samsung.hardware.security.widevine.keyprov@1.0.so
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine
+vendor/bin/vendor.samsung.hardware.security.widevine.keyprov@1.0-service
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
+vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov@1.0-service.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.clearkey.xml
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+vendor/lib/liboemcrypto.so
+vendor/lib/libwvhidl.so
+vendor/lib64/vendor.samsung.hardware.security.widevine.keyprov@1.0.so
+
 # WIFI #
 vendor/bin/hw/macloader
 vendor/bin/hw/mfgloader
