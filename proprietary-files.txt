@@ -253,6 +253,33 @@ vendor/bin/hw/vendor.samsung_slsi.hardware.configstore@1.0-service
 vendor/etc/init/vendor.samsung_slsi.hardware.configstore@1.0-service.rc
 vendor/lib64/vendor.samsung_slsi.hardware.configstore@1.0.so
 
+# SAMSUNG_SLSI HWC #
+system/lib/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
+system/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
+vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
+vendor/etc/init/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service.rc
+vendor/lib64/hw/hwcomposer.exynos9611.so
+vendor/lib/libExynosHWCService.so
+vendor/lib/libGrallocWrapper.so
+vendor/lib/libexynosdisplay.so
+vendor/lib/libexynosgraphicbuffer.so
+vendor/lib/libexynosgscaler.so
+vendor/lib/libexynosscaler.so
+vendor/lib/libexynosutils.so
+vendor/lib/libexynosv4l2.so
+vendor/lib/hw/hwcomposer.exynos9611.so
+vendor/lib64/libExynosHWCService.so
+vendor/lib64/libGrallocWrapper.so
+vendor/lib64/libacryl.so
+vendor/lib64/libacryl_plugin_slsi_hdr10.so
+vendor/lib64/libexynosdisplay.so
+vendor/lib64/libexynosgraphicbuffer.so
+vendor/lib64/libexynosgscaler.so
+vendor/lib64/libexynosscaler.so
+vendor/lib64/libexynosutils.so
+vendor/lib64/libexynosv4l2.so
+vendor/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
+
 # SAMSUNG_SLSI MEMTRACK #
 vendor/lib64/hw/memtrack.exynos9611.so
 vendor/lib/hw/memtrack.exynos9611.so
