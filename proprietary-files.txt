@@ -244,6 +244,15 @@ vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 
+# SAMSUNG_SLSI CONFIGSTORE #
+system/lib/vendor.samsung_slsi.hardware.configstore-utils.so
+system/lib/vendor.samsung_slsi.hardware.configstore@1.0.so
+system/lib64/vendor.samsung_slsi.hardware.configstore-utils.so
+system/lib64/vendor.samsung_slsi.hardware.configstore@1.0.so
+vendor/bin/hw/vendor.samsung_slsi.hardware.configstore@1.0-service
+vendor/etc/init/vendor.samsung_slsi.hardware.configstore@1.0-service.rc
+vendor/lib64/vendor.samsung_slsi.hardware.configstore@1.0.so
+
 # SAMSUNG_SLSI MEMTRACK #
 vendor/lib64/hw/memtrack.exynos9611.so
 vendor/lib/hw/memtrack.exynos9611.so
