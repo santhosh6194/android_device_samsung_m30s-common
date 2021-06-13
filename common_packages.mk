@@ -147,7 +147,14 @@ PRODUCT_PACKAGES += \
 # SOUNDTRIGGER #
 PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-impl:32
-    
+
+# THERMAL #
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.samsung
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/config/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+
 # USB #
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1-service.typec
