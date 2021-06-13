@@ -138,6 +138,11 @@ PRODUCT_PACKAGES += \
 # RENDERSCRIPT #
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
+
+# SENSORS #
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.1-service.samsung-multihal \
+    libsensorndkbridge
     
 # USB #
 PRODUCT_PACKAGES += \

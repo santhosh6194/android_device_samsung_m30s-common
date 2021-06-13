@@ -2,3 +2,4 @@
 
 type vendor_bluetooth_prop, property_type;
 type vendor_camera_prop, property_type;
+type vendor_sensors_prop, property_type;

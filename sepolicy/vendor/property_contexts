@@ -9,3 +9,6 @@ persist.vendor.hifills.          u:object_r:vendor_camera_prop:s0
 persist.vendor.dualCam.          u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.           u:object_r:vendor_camera_prop:s0
 vendor.hal.camera.               u:object_r:vendor_camera_prop:s0
+
+# SENSORS #
+persist.sns.camera_light   u:object_r:vendor_sensors_prop:s0

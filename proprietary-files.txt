@@ -214,6 +214,13 @@ vendor/firmware/fimc_is_rta.bin
 vendor/lib64/hw/memtrack.exynos9611.so
 vendor/lib/hw/memtrack.exynos9611.so
 
+# SENSORS #
+vendor/etc/sensors/hals.conf
+vendor/lib/hw/sensors.sensorhub.so
+vendor/lib/sensors.grip.so
+vendor/lib64/hw/sensors.sensorhub.so
+vendor/lib64/sensors.grip.so
+
 # TEEGRIS #
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon
