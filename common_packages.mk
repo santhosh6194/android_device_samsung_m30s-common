@@ -205,6 +205,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# RRO #
+PRODUCT_PACKAGES += \
+    WifiOverlay \
+    TetheringConfigOverlay
+    
 # SENSORS #
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.samsung-multihal \
@@ -245,7 +250,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
-    WifiOverlay \
     wpa_supplicant
 
 PRODUCT_COPY_FILES += \
