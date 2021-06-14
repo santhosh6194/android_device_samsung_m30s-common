@@ -7,6 +7,7 @@ type persist_rmnet_prop, property_type;
 
 type vendor_bluetooth_prop, property_type;
 type vendor_camera_prop, property_type;
+type vendor_gps_prop, property_type;
 type vendor_sensors_prop, property_type;
 type vendor_wlan_prop, property_type;
 type vendor_wlbtd_prop, property_type;

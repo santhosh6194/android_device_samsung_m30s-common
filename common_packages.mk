@@ -79,12 +79,13 @@ PRODUCT_PACKAGES += \
 
 # INIT #
 PRODUCT_PACKAGES += \
+    fstab.exynos9611 \
     init.exynos9611.rc \
     init.exynos9611.usb.rc \
-    fstab.exynos9611 \
-    ueventd.exynos9611.rc  \
+    init.gps.rc \
     init.vendor.rilchip.rc \
-    init.vendor.rilcommon.rc
+    init.vendor.rilcommon.rc \
+    ueventd.exynos9611.rc
 
 # KEYLAYOUT #
 PRODUCT_COPY_FILES += \

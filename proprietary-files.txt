@@ -160,6 +160,18 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/lib/hw/gatekeeper.exynos9611.so
 vendor/lib64/hw/gatekeeper.exynos9611.so
 
+# GNSS #
+vendor/bin/hw/gps.sh
+vendor/bin/hw/gpsd
+vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
+vendor/etc/gnss/gps.cfg
+vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
+vendor/lib/libwrappergps.so
+vendor/lib64/hw/android.hardware.gnss@2.1-impl.so
+vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
+vendor/lib64/libwrappergps.so
+vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
+
 # GRALLOC #
 vendor/lib/hw/gralloc.exynos9611.so
 vendor/lib64/hw/gralloc.exynos9611.so
