@@ -97,6 +97,7 @@ PRODUCT_PACKAGES += \
     init.gps.rc \
     init.vendor.rilchip.rc \
     init.vendor.rilcommon.rc \
+    skip_mount.exynos9611 \
     ueventd.exynos9611.rc
 
 # KEYLAYOUT #
