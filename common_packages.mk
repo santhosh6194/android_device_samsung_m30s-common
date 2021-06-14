@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-legacy \
     Snap
 
+# FASTCHARGE #
+PRODUCT_PACKAGES += \
+    vendor.lineage.fastcharge@1.0-service.samsung
+    
 # GATEKEEPER #
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \

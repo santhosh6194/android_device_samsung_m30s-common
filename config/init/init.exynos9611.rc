@@ -125,6 +125,9 @@ on init
 
     start watchdogd
 
+    # fastcharge switch
+    chown system radio /sys/class/sec/switch/afc_disable
+    
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864

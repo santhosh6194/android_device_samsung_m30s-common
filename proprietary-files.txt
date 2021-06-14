@@ -151,6 +151,9 @@ vendor/firmware/dual_cal_wide_sub.bin
 # Copied by vendor_init which needs read access
 system/media/fruc_kernels.exynos9610.bin:vendor/firmware/fruc_kernels.exynos9610.bin
 
+# CHARGER_FIRMWARE #
+vendor/firmware/mfc_fw.bin
+
 # CODECS #
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
