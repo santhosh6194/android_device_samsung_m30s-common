@@ -339,6 +339,20 @@ vendor/tee/driver/00000000-0000-0000-0000-4d53546d7374
 vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
 vendor/tee/tui/resolution_common/ID00000100
 
+# VIBRATOR #
+system/lib/vendor.samsung.hardware.vibrator@2.0.so
+system/lib/vendor.samsung.hardware.vibrator@2.1.so
+system/lib/vendor.samsung.hardware.vibrator@2.2.so
+system/lib64/vendor.samsung.hardware.vibrator@2.0.so
+system/lib64/vendor.samsung.hardware.vibrator@2.1.so
+system/lib64/vendor.samsung.hardware.vibrator@2.2.so
+system/lib/vendor.samsung.hardware.vibrator-V1-cpp.so
+system/lib64/vendor.samsung.hardware.vibrator-V1-cpp.so
+vendor/etc/init/vendor.samsung.hardware.vibrator@2.1-service.rc
+vendor/bin/hw/vendor.samsung.hardware.vibrator@2.1-service
+vendor/lib64/vendor.samsung.hardware.vibrator@2.0.so
+vendor/lib64/vendor.samsung.hardware.vibrator@2.1.so
+
 # WIDEVINE #
 system/lib/vendor.samsung.hardware.security.widevine.keyprov@1.0.so
 system/lib64/vendor.samsung.hardware.security.widevine.keyprov@1.0.so
