@@ -85,6 +85,9 @@ vendor/lib64/libsynaFpSensorTestNwd.so
 # BLUETOOTH #
 system/lib64/libaptX_encoder.so
 
+# BLUETOOTH FIRMWARE #
+vendor/etc/wifi/mx140_bt.hcf
+
 # CAMERA #
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service
 vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service.rc
