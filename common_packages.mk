@@ -113,6 +113,10 @@ PRODUCT_PACKAGES += \
 # LIGHT #
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.samsung
+    
+# LIVE DISPLAY #
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service.samsung-exynos
 
 # MEDIA #
 PRODUCT_PACKAGES += \
