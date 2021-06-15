@@ -124,6 +124,8 @@ vendor/lib/libdualcam_refocus_video.so
 vendor/lib/libexynoscamera3.so
 vendor/lib/libgiantmscl.so
 vendor/lib/libhwjpeg.so
+vendor/lib/libremosaic_daemon.so
+vendor/lib/libremosaiclib_s5k3p8sp.so
 vendor/lib/libsensorlistener.so
 vendor/lib/libstagefrighthw.so
 vendor/lib/libuniapi.so
@@ -134,6 +136,9 @@ vendor/lib64/libdualcam_refocus_image.so
 vendor/lib64/libexynoscamera3.so
 vendor/lib64/libgiantmscl.so
 vendor/lib64/libhwjpeg.so
+vendor/lib64/libremosaic_daemon.so
+vendor/lib64/libremosaiclib_s5kgm2.so
+vendor/lib64/libremosaiclib_s5k3p8sp.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libstagefrighthw.so
 vendor/lib64/libuniapi.so

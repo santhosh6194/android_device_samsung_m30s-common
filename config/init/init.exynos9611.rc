@@ -827,12 +827,6 @@ service pageboostd /system/bin/pageboostd
     socket pageboostd seqpacket 0660 system system
     disabled
 
-# SW Remosaic daemon of Camera
-service remosaic_daemon /vendor/bin/remosaic_daemon
-    class late_start
-    user cameraserver
-    group cameraserver
-
 # SSWAP
 service swapon /system/bin/sswap -s -z -f 3072
     class core
