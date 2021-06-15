@@ -10,8 +10,14 @@ persist.vendor.dualCam.          u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.           u:object_r:vendor_camera_prop:s0
 vendor.hal.camera.               u:object_r:vendor_camera_prop:s0
 
+# FACTORY #
+ro.factory.factory_binary  u:object_r:vendor_factory_prop:s0
+
 # GNSS #
 dev.gnss.		    u:object_r:vendor_gps_prop:s0
+
+# HWC #
+hwc.exynos.vsync_mode      u:object_r:vendor_hwc_prop:s0
 
 # PERSIST #
 persist.rmnet.             u:object_r:persist_rmnet_prop:s0
@@ -25,6 +31,9 @@ ril.clatd.		    u:object_r:vendor_radio_prop:s0
 
 # SENSORS #
 persist.sns.camera_light   u:object_r:vendor_sensors_prop:s0
+
+# USB #
+sys.usb.ffs.aio_compat	    u:object_r:sys_usbffs_prop:s0
 
 # WLAN #
 vendor.wlan.		    u:object_r:vendor_wlan_prop:s0

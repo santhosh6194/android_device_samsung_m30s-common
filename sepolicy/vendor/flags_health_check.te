@@ -1,0 +1,4 @@
+# flags_health_check.te
+
+get_prop(flags_health_check, adbd_prop);
+get_prop(flags_health_check, gsid_prop);

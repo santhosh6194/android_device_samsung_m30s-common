@@ -1,0 +1,7 @@
+# macloader.te
+
+allow macloader property_socket:sock_file write;
+
+allow macloader init:unix_stream_socket { connectto };
+
+set_prop(macloader, vendor_wlan_prop);
