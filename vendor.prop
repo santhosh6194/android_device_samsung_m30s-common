@@ -18,6 +18,16 @@ ro.security.keystore.keytype=sak,gak
 # OPENGLES #
 ro.opengles.version=196610
 
+# RIL #
+ro.carrier=unknown
+ro.radio.noril=no
+ro.telephony.default_network=9
+ro.vendor.multisim.simslotcount=2
+persist.radio.multisim.config=ss
+vendor.rild.libpath=/vendor/lib64/libsec-ril.so
+vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
+vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
+
 # SURFACEFLINGER #
 # Disable backpressure propagation
 debug.sf.disable_backpressure=1
