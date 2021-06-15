@@ -1,3 +1,4 @@
+import /vendor/etc/init/hw/init.exynos9611.root.rc
 
 on early-init
     mkdir /mnt/vendor/efs 0771 radio system

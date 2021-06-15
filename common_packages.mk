@@ -93,6 +93,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.exynos9611 \
     init.exynos9611.rc \
+    init.exynos9611.root.rc \
     init.exynos9611.usb.rc \
     init.gps.rc \
     init.vendor.rilchip.rc \
