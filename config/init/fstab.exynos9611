@@ -15,3 +15,6 @@
 #/dev/block/platform/13500000.dwmmc0/by-name/hidden                 /preload    ext4    defaults    voldmanaged=preload:auto
 /devices/platform/13550000.dwmmc2/mmc_host/*                        auto        vfat    defaults    voldmanaged=sdcard:auto
 /devices/platform/13200000.usb/13200000.dwc3/xhci-hcd.2.auto/usb*   auto        auto    defaults    voldmanaged=usb:auto
+
+# ZRAM
+/dev/block/zram0                                        none                    swap    defaults    zramsize=2684354560,max_comp_streams=8
