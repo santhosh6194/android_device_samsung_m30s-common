@@ -4,7 +4,6 @@
 type camera_vendor_data_file, file_type, data_file_type;
 type display_vendor_data_file, file_type, data_file_type;
 type exynos_data_file, file_type, data_file_type;
-type gps_vendor_data_file, file_type, data_file_type;
 type media_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
 
@@ -20,6 +19,7 @@ type mb_po_efs_file, fs_type;
 
 # PROC #
 type proc_simslot_count, fs_type, proc_type;
+type proc_swappiness, fs_type, proc_type;
 
 # ROOT #
 # /carrier /omr /spu # 
