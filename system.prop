@@ -7,6 +7,9 @@ ro.cmc.version=2.0
 # CHARGER #
 ro.charger.enable_suspend=true
 
+# https://source.android.com/devices/graphics/renderer #
+ro.zygote.disable_gl_preload=true
+
 # WIFI #
 wifi.direct.interface=p2p0
 ro.boot.wificountrycode=00
