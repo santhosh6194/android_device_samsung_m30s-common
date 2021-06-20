@@ -425,14 +425,6 @@ on post-fs-data
     # MST Check Support
     chown system system /sys/class/mstldo/mst_drv/support
     chmod 0444 /sys/class/mstldo/mst_drv/support
-    
-    restorecon --recursive --force /efs
-    restorecon --recursive --force /cpefs
-    restorecon --recursive --force /mnt/vendor/efs
-    restorecon --recursive --force /mnt/vendor/cpefs
-    restorecon --recursive --force /sec_efs
-    restorecon_recursive /carrier
-    restorecon /sys/kernel/debug/tracing/trace_marker
 
 # super slow motion
     mkdir /data/vendor/mediacodec 0700 mediacodec mediacodec
