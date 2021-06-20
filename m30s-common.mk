@@ -14,8 +14,11 @@
 # limitations under the License.
 #
 
-### PROPRIETARY VENDOR FILES
+# PROPRIETARY VENDOR FILES #
 $(call inherit-product, vendor/samsung/m30s-common/m30s-common-vendor.mk)
+
+# COMMON_PACKAGES #
+$(call inherit-product, device/samsung/m30s-common/common_packages.mk)
 
 COMMON_PATH := device/samsung/m30s-common
 
