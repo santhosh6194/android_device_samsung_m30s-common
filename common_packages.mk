@@ -190,7 +190,7 @@ PRODUCT_COPY_FILES += \
 
 # POWER #
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.samsung-libperfmgr \
+    android.hardware.power-service.samsung-libperfmgr \
     libperfmgr.vendor:64
 
 PRODUCT_COPY_FILES += \
