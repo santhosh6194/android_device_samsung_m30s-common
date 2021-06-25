@@ -221,6 +221,7 @@ PRODUCT_PACKAGES += \
 
 # SHIMS #
 PRODUCT_PACKAGES += \
+    libaudioproxy_shim \
     libshim_sensorndkbridge
     
 # SOUNDTRIGGER #

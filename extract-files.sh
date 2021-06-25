@@ -64,6 +64,11 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
             ;;
     esac
+    case "${1}" in
+        vendor/lib/libaudioproxy.so)
+            "${PATCHELF}" --add-needed libaudioproxy_shim.so "${2}"
+            ;;
+    esac
     }
     
 if [ -z "${ONLY_TARGET}" ]; then
