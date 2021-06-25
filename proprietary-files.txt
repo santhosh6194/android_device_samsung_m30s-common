@@ -15,6 +15,8 @@ vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/SoundBoosterParam.txt
 vendor/etc/usb_audio_policy_configuration.xml
 vendor/lib/hw/audio.primary.exynos9611.so
+vendor/lib/vndk/libtinyalsa.so
+vendor/lib/vndk/libaudioroute.so
 vendor/lib/lib_SamsungRec_07001.so
 vendor/lib/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib/lib_SoundAlive_AlbumArt_ver105.so

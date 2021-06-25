@@ -9,8 +9,6 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
-    libaudioroute \
-    libtinyalsa \
     libtinycompress 
 
 PRODUCT_COPY_FILES += \
