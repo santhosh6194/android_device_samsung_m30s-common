@@ -60,6 +60,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.samsung
     
+# FM RADIO #
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
+    
 # GATEKEEPER #
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
