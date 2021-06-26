@@ -64,11 +64,3 @@ LOCAL_SRC_FILES := init.vendor.rilcommon.rc
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_ETC)/init
 include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := skip_mount.exynos9611
-LOCAL_SRC_FILES := skip_mount.cfg
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SYSTEM_EXT_MODULE := true
-LOCAL_MODULE_RELATIVE_PATH := init/config
-include $(BUILD_PREBUILT)

@@ -1,4 +1,6 @@
-on early-init    
+on early-init  
+    umount /product
+  
     # reset_reason
     chown system system /proc/reset_reason
     chmod 0440 /proc/reset_reason
