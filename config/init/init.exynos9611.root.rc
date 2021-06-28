@@ -889,38 +889,6 @@ on boot
     chown system system /sys/class/sec/tsp/virtual_prox
     chown system system /sys/class/sec/tsp/hw_param
 
-    # Permissions for Touchscreen-1
-    chown system radio /sys/class/sec/tsp1/cmd
-    chown system system /sys/class/sec/tsp1/input/enabled
-    chmod 0660 /sys/class/sec/tsp/input1/enabled
-    chown system system /sys/class/sec/tsp1/multi_count
-    chown system system /sys/class/sec/tsp1/wet_mode
-    chown system system /sys/class/sec/tsp1/noise_mode
-    chown system system /sys/class/sec/tsp1/comm_err_count
-    chown system system /sys/class/sec/tsp1/checksum
-    chown system system /sys/class/sec/tsp1/all_touch_count
-    chown system system /sys/class/sec/tsp1/z_value
-    chown system system /sys/class/sec/tsp1/sensitivity_mode
-    chown system system /sys/class/sec/tsp1/prox_power_off
-    chown system system /sys/class/sec/tsp1/ic_reset_count
-    chown system system /sys/class/sec/tsp1/mode_change_failed_count
-
-    # Permissions for Touchscreen-2
-    chown system radio /sys/class/sec/tsp2/cmd
-    chown system system /sys/class/sec/tsp2/input/enabled
-    chmod 0660 /sys/class/sec/tsp/input2/enabled
-    chown system system /sys/class/sec/tsp2/multi_count
-    chown system system /sys/class/sec/tsp2/wet_mode
-    chown system system /sys/class/sec/tsp2/noise_mode
-    chown system system /sys/class/sec/tsp2/comm_err_count
-    chown system system /sys/class/sec/tsp2/checksum
-    chown system system /sys/class/sec/tsp2/all_touch_count
-    chown system system /sys/class/sec/tsp2/z_value
-    chown system system /sys/class/sec/tsp2/sensitivity_mode
-    chown system system /sys/class/sec/tsp2/prox_power_off
-    chown system system /sys/class/sec/tsp2/ic_reset_count
-    chown system system /sys/class/sec/tsp2/mode_change_failed_count
-	
     # Permissions for Touchkey
     chmod 0660 /sys/class/sec_touchkey/input/enabled
     chown system system /sys/class/sec/sec_touchkey/input/enabled
@@ -1102,8 +1070,8 @@ on charger
 on property:sys.boot_completed=1
     write /sys/class/power_supply/battery/boot_completed "1"
     
-# lpm
-service lpm /system/bin/charger
+# charger
+service charger /system/bin/charger
     class sec-charger
     user root
     group system radio input
