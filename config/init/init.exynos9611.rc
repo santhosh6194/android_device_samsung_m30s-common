@@ -10,20 +10,6 @@ on init
     # Set permissions for persist partition
     mkdir /persist 0771 system system
 
-    # See storage config details at http://source.android.com/tech/storage/
-    mkdir /storage/sdcard 0000 root root
-    mkdir /storage/usb1 0000 root root
-    mkdir /storage/usb2 0000 root root
-    mkdir /mnt/media_rw/sdcard 0700 media_rw media_rw
-    mkdir /mnt/media_rw/usb1 0700 media_rw media_rw
-    mkdir /mnt/media_rw/usb2 0700 media_rw media_rw
-
-    export SECONDARY_STORAGE /storage/sdcard:/storage/usb1:/storage/usb2
-
-    # Support legacy paths
-    symlink /storage/sdcard /mnt/ext_sd
-    symlink /data/app /factory
-
     #Reactivation Lock
     symlink /dev/block/platform/13520000.ufs/by-name/steady /dev/block/steady
 
@@ -115,6 +101,20 @@ on init
     chown system system /dev/cpuset/cgroup.procs
     chmod 0664 /dev/cpuset/tasks
 
+    # for power hal
+    chown system radio /dev/cluster0_freq_min
+    chown system radio /dev/cluster0_freq_max
+    chown system radio /dev/cluster1_freq_min
+    chown system radio /dev/cluster1_freq_max
+    chown system radio /dev/cpu_dma_latency
+    chown system radio /dev/stune/top-app/schedtune.boost
+    chmod 0664 /dev/cluster0_freq_min
+    chmod 0664 /dev/cluster0_freq_max
+    chmod 0664 /dev/cluster1_freq_min
+    chmod 0664 /dev/cluster1_freq_max
+    chmod 0664 /dev/cpu_dma_latency
+    chmod 0664 /dev/stune/top-app/schedtune.boost
+    
     #sensor
     chmod 0664 /dev/nanohub
     chmod 0664 /dev/nanohub_comms
@@ -206,6 +206,9 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
+# swap
+    swapon_all /vendor/etc/fstab.exynos9611
+ 
 # SensorHub Log folder
     mkdir /data/vendor/sensorhub/ 0771 root system
 
@@ -466,13 +469,11 @@ on fs
     mount_all /vendor/etc/fstab.exynos9611
     # We need to seperate mounting SEC_EFS partition from fstab file due to GSI image loading case
     wait /dev/block/platform/13520000.ufs/by-name/sec_efs
-    mount ext4 /dev/block/platform/13520000.ufs/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
-    setprop ro.crypto.fuse_sdcard true
+    mount ext4 /dev/block/platform/13520000.ufs/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,no_sehash_xattr
 
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
     restorecon_recursive /mnt/vendor/persist
-    restorecon_recursive /data
 
     mkdir /mnt/vendor/persist/data/sfs 0700 system system
     mkdir /mnt/vendor/persist/data/tz 0700 system system
@@ -572,7 +573,7 @@ on fs
      chown system radio /sys/class/sensors/gyro_sensor/selftest_dps
      chown system radio /sys/class/sensors/gyro_sensor/vendor
      chown system radio /sys/class/sensors/gyro_sensor/name
-         chown system system /sys/class/sensors/gyro_sensor/dhr_sensor_info
+     chown system system /sys/class/sensors/gyro_sensor/dhr_sensor_info
 
 # Magnetic_sensor
     chown system radio /sys/class/sensors/magnetic_sensor/raw_data
@@ -675,12 +676,6 @@ on fs
     chmod 0660 /sys/class/dp_sec/dp_drm
     chown system system /sys/class/dp_sec/dp_drm
 
-# Copy DRM Key
-#    copy /system/app/wv.keys /factory/wv.keys
-
-# Permission for DRM Key
-#    chmod 0644 /factory/wv.keys
-
 # Permissions for audio
     chown system radio /sys/class/audio/earjack/select_jack
     chown system radio /sys/class/audio/earjack/key_state
@@ -728,38 +723,11 @@ on fs
 #load ecd firmware
     write /proc/ecd/load_firmware 1
 
-# faced
-service faced /system/bin/faced
-    class late_start
-    user system
-    group system
-
-service fuse_sdcard /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard /storage/sdcard
-    class late_start
-    disabled
-service fuse_usb1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb1 /storage/usb1
-    class late_start
-    disabled
-service fuse_usb2 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb2 /storage/usb2
-    class late_start
-    disabled
-
-# disabled from system sw audio it will be enabled later
-# service abox /vendor/bin/main_abox 14a50000.abox /data/vendor/log/abox
-#    class late_start
-#    user audioserver
-#    group system
-
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /system/bin/watchdogd 10 20
      class core
      oneshot
      seclabel u:r:watchdogd:s0
-
-# on userdebug and eng builds, enable kgdb on the serial console
-on property:ro.debuggable=1
-    write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
-    write /sys/module/fiq_debugger/parameters/kgdb_enable 1
 
 on property:ro.bootmode=charger
     wait /dev/block/platform/13520000.ufs/by-name/sec_efs
@@ -772,69 +740,6 @@ on property:ro.bootmode=charger
     chmod 0660 /efs/usb_hw_param/usb_hw_param.log
     mkdir /efs/lpm 0775 system system
     class_start sec-charger
-
-# Sysscope
-service prepare_param /system/bin/prepare_param.sh /dev/block/platform/13520000.ufs/by-name/param
-    class core
-    user root
-    group root
-    seclabel u:r:prepare_param:s0
-    oneshot
-
-service dhcpcd_wlan0 /vendor/bin/dhcpcd -aABDKL
-        class main
-        disabled
-        oneshot
-
-service iprenew_wlan0 /vendor/bin/dhcpcd -n
-        class main
-        disabled
-        oneshot
-
-service dhcpcd_p2p /vendor/bin/dhcpcd -aABKL
-        class main
-        disabled
-        oneshot
-
-service iprenew_p2p /vendor/bin/dhcpcd -n
-        class main
-        disabled
-        oneshot
-
-# SPE-1748: PANU DHCP Client not launched
-service dhcpcd_bt-pan /vendor/bin/dhcpcd -ABKL
-        class main
-        disabled
-        oneshot
-
-service iprenew_bt-pan /vendor/bin/dhcpcd -n
-        class main
-        disabled
-        oneshot
-
-# tracking activation VNG
-#on property:ro.csc.sales_code=XXV
-#   tracking_activation_VNG
-
-# Pageboostd
-on property:sys.boot_completed=1
-    start pageboostd
-
-service pageboostd /system/bin/pageboostd
-    class main
-    user system
-    group system mount radio net_bt sdcard_rw shell media media_rw
-    socket pageboostd seqpacket 0660 system system
-    disabled
-
-# SSWAP
-service swapon /system/bin/sswap -s -z -f 3072
-    class core
-    user system
-    group system
-    capabilities SYS_ADMIN
-    seclabel u:r:sswap:s0
-    oneshot
 
 # sensorhub fw
 on post-fs
