@@ -133,7 +133,8 @@ PRODUCT_COPY_FILES += \
 # MEMTRACK #
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl:64 \
-    android.hardware.memtrack@1.0-service
+    android.hardware.memtrack@1.0-service \
+    libtextclassifier_hash.vendor
 
 # OMX #
 PRODUCT_PACKAGES += \
