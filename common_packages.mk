@@ -99,8 +99,6 @@ PRODUCT_PACKAGES += \
     init.exynos9611.root.rc \
     init.exynos9611.usb.rc \
     init.gps.rc \
-    init.vendor.rilchip.rc \
-    init.vendor.rilcommon.rc \
     ueventd.exynos9611.rc
 
 # KEYLAYOUT #
