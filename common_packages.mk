@@ -45,8 +45,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl:64 \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth.a2dp@1.0 \
-    android.hardware.bluetooth.audio@2.0 \
-    android.hardware.bluetooth.audio@2.0-impl:32 \
     libbt-vendor
 
 PRODUCT_COPY_FILES += \

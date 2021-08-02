@@ -17,6 +17,8 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
+#define BTM_ESCO_TRANSPORT_UNIT_SIZE_PCM16
+
 #pragma push_macro("PROPERTY_VALUE_MAX")
 
 #define BTM_DEF_LOCAL_NAME "Galaxy M30s"
