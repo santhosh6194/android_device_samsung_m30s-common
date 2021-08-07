@@ -69,6 +69,10 @@ PRODUCT_PACKAGES += \
     android.hardware.cas@1.1 \
     android.hardware.cas@1.2
 
+# DOZE #
+PRODUCT_PACKAGES += \
+    SamsungDoze
+    
 # DRM #
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey

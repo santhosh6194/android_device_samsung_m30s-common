@@ -650,6 +650,14 @@
     <bool name="config_enableAutoPowerModes">true</bool>
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
+    <!-- ##### S A M S U N G D O Z E #### -->
+    <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_dozeAfterScreenOffByDefault">true</bool>
+    <bool name="config_dozePulsePickup">true</bool>
+    <integer name="config_screenBrightnessDoze">5</integer>
+    <integer name="config_dozeWakeLockScreenDebounce">1500</integer>
+    <string name="config_dozeComponent" translatable="false">com.android.systemui/com.android.systemui.doze.DozeService</string>
+        
     <!-- ##### S E N S O R S ##### -->
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
 
