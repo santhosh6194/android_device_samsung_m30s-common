@@ -1,5 +1,7 @@
 ### AUDIO
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0 \
+    android.hardware.audio@5.0 \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@5.0-impl \
     android.hardware.audio.effect@2.0-impl \
@@ -36,7 +38,8 @@ PRODUCT_PACKAGES += \
     
 # BIOMETRIC FINGERPRINT #
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.samsung
+    android.hardware.biometrics.fingerprint@2.1-service.samsung \
+    android.hardware.biometrics.fingerprint@2.1
 
 # BLUETOOTH #
 PRODUCT_PACKAGES += \
@@ -55,10 +58,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4 \
     android.hardware.camera.provider@2.5 \
+    android.hardware.camera.provider@2.6 \
     android.hardware.camera.provider@2.4-legacy \
     android.hardware.camera.provider@2.5-legacy \
+    android.hardware.camera.provider@2.6-legacy \
     Snap
 
+# CAS #
+PRODUCT_PACKAGES += \
+    android.hardware.cas@1.1 \
+    android.hardware.cas@1.2
+
+# DRM #
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3-service.clearkey
+    
 # FASTCHARGE #
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.samsung
@@ -78,15 +92,14 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
-    android.hardware.graphics.composer@2.2-impl \
-    android.hardware.graphics.composer@2.2-service \
+    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.graphics.mapper@2.0-impl-2.1
 
 # HEALTH #
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl:64 \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.0-impl:64 \
+    android.hardware.health@2.0-service
 
 # HIDL #
 PRODUCT_PACKAGES += \
@@ -123,8 +136,8 @@ PRODUCT_PACKAGES += \
 
 # MEDIA #
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-impl \
-    android.hardware.media.omx@1.0-service
+    android.hardware.media.omx@1.0-service \
+    libminijail
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
@@ -196,8 +209,8 @@ PRODUCT_COPY_FILES += \
 
 # POWER #
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.samsung-libperfmgr \
-    libperfmgr.vendor:64
+    android.hardware.power@1.3-service.samsung-libperfmgr \
+    libperfmgr.vendor
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/config/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -205,6 +218,18 @@ PRODUCT_COPY_FILES += \
 # PUBLIC LIBRARIES #
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/config/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# RADIO #
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.config@1.1 \
+    android.hardware.radio.config@1.2 \
+    android.hardware.radio@1.0 \
+    android.hardware.radio@1.1 \
+    android.hardware.radio@1.2 \
+    android.hardware.radio@1.3 \
+    android.hardware.radio@1.4 \
+    android.hardware.radio.deprecated@1.0
     
 # RECOVERY #
 PRODUCT_PACKAGES += \
@@ -232,7 +257,8 @@ PRODUCT_PACKAGES += \
     
 # SOUNDTRIGGER #
 PRODUCT_PACKAGES += \
-    android.hardware.soundtrigger@2.0-impl:32
+    android.hardware.soundtrigger@2.0-impl:32 \
+    android.hardware.soundtrigger@2.0
 
 # SYSCONFIG #
 PRODUCT_COPY_FILES += \
@@ -247,11 +273,14 @@ PRODUCT_COPY_FILES += \
 
 # TOUCH HAL #
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung  
+    android.hardware.thermal@2.0-service.samsung \
+    android.hardware.thermal@2.0 
 
 # USB #
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.1-service.typec
+    android.hardware.usb@1.1-service.typec \
+    android.hardware.usb@1.0 \
+    android.hardware.usb@1.1
     
 # USB TRUST HAL #
 PRODUCT_PACKAGES += \
@@ -259,7 +288,16 @@ PRODUCT_PACKAGES += \
 
 # WIFI #
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0 \
     android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.1 \
+    android.hardware.wifi@1.2 \
+    android.hardware.wifi@1.3 \
+    android.hardware.wifi@1.4 \
+    android.hardware.wifi.supplicant@1.0 \
+    android.hardware.wifi.supplicant@1.1 \
+    android.hardware.wifi.supplicant@1.2 \
+    android.hardware.wifi.supplicant@1.3 \
     hostapd \
     wpa_supplicant
 
