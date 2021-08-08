@@ -271,15 +271,15 @@ PRODUCT_COPY_FILES += \
     
 # THERMAL #
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.samsung
+    android.hardware.thermal@2.0-service.samsung \
+    android.hardware.thermal@2.0
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/config/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 # TOUCH HAL #
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.samsung \
-    android.hardware.thermal@2.0 
+    vendor.lineage.touch@1.0-service.samsung  
 
 # USB #
 PRODUCT_PACKAGES += \
