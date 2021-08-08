@@ -9,15 +9,23 @@ allow hal_camera_default hal_graphics_mapper_hwservice:hwservice_manager find;
 
 allow hal_camera_default hal_graphics_composer_default:fd use;
 
-r_dir_file(hal_camera_default, sysfs_camera);
+allow hal_camera_default sysfs_camera:dir r_dir_perms;
+allow hal_camera_default sysfs_camera:file r_file_perms;
 allow hal_camera_default sysfs_camera_writable:file rw_file_perms;
 
 allow hal_camera_default sysfs_mem_boost_writable:file rw_file_perms;
 
+allow hal_camera_default sysfs_ems:dir r_dir_perms;
+allow hal_camera_default sysfs_ems:file r_file_perms;
+
 allow hal_camera_default camera_vendor_data_file:dir search;
 allow hal_camera_default camera_vendor_data_file:file rw_file_perms;
 
-r_dir_file(hal_camera_default, sysfs_battery);
+allow hal_camera_default sysfs_battery:dir r_dir_perms;
+allow hal_camera_default sysfs_battery:file r_file_perms;
+
+allow hal_camera_default sysfs_battery_writable:dir r_dir_perms;
+allow hal_camera_default sysfs_battery_writable:file r_file_perms;
 
 get_prop(hal_camera_default, vendor_factory_prop);
 get_prop(hal_camera_default, exported_camera_prop);

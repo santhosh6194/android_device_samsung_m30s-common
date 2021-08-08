@@ -1,6 +1,5 @@
 # init.te
 
-allow init omr_file:dir mounton;
 allow init efs_file:dir mounton;
 allow init mnt_vendor_file:dir mounton;
 
@@ -8,9 +7,14 @@ allow init tmpfs:lnk_file create;
 
 allow init kernel:system module_request;
 
+allow init sysfs_mmc_host:file { setattr };
+allow init sysfs_scsi_host:file { setattr };
+
 allow init socket_device:sock_file { create setattr unlink };
 
 allow init dtbo_block_device:lnk_file { relabelto };
 allow init boot_block_device:lnk_file { relabelto };
 
 allow init proc:file { setattr };
+
+allow init usb_device:dir { mounton };

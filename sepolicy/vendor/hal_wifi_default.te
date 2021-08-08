@@ -1,8 +1,9 @@
 # hal_wifi_default.te
 
+get_prop(hal_wifi_default, vendor_wifi_prop);
 set_prop(hal_wifi_default, vendor_wlan_prop);
 
-allow hal_wifi_default conn_vendor_data_file:dir search;
+allow hal_wifi_default conn_vendor_data_file:dir { search write add_name };
 allow hal_wifi_default conn_vendor_data_file:file rw_file_perms;
 allow hal_wifi_default wifi_vendor_data_file:dir search;
 allow hal_wifi_default hal_wifi_default:capability sys_module;

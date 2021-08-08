@@ -1,0 +1,3 @@
+# adbd.te
+
+allow adbd usb_device:dir { search };

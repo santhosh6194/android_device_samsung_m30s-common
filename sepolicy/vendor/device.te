@@ -1,5 +1,6 @@
 # device.te
 
+type geotrans_device, dev_type;
 type cpefs_block_device, dev_type;
 type fm_radio_device, dev_type;
 type gnss_device, dev_type;

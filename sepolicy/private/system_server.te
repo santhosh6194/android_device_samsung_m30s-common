@@ -1,0 +1,5 @@
+# system_server.te
+
+get_prop(system_server, vendor_radio_prop);
+
+allow system_server app_zygote:process { getpgid };

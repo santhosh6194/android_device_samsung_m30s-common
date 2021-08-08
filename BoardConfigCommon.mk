@@ -45,11 +45,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 # SYSTEM #
 AB_OTA_UPDATER := false
 
-BOARD_ROOT_EXTRA_FOLDERS := \
-    carrier \
-    efs \
-    omr \
-    spu
+BOARD_ROOT_EXTRA_FOLDERS := efs
     
 # AUDIO #
 USE_XML_AUDIO_POLICY_CONF := 1
@@ -134,6 +130,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 include device/lineage/sepolicy/exynos/sepolicy.mk
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/samsung_slsi/sepolicy/sepolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # VENDOR FILE OVERRIDE #

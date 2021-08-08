@@ -1,3 +1,6 @@
+# ARGOS #
+vendor/bin/argosd
+
 # AUDIO #
 vendor/lib/hw/audio.primary.exynos9611.so
 vendor/lib/vndk/libtinyalsa.so

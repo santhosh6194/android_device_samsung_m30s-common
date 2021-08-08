@@ -1,7 +1,9 @@
-# property_contexts
+# property_contexts #
 
-# BLUETOOTH #
-vendor.bluetooth_fw_ver    u:object_r:vendor_bluetooth_prop:s0
+persist.rmnet.             u:object_r:persist_rmnet_prop:s0
+persist.data.df.           u:object_r:persist_data_df_prop:s0
+persist.data.wda.          u:object_r:persist_data_wda_prop:s0
+persist.radio.multisim.config    u:object_r:persist_sim_prop:s0
 
 # CAMERA #
 persist.vendor.sys.camera.       u:object_r:vendor_camera_prop:s0
@@ -9,6 +11,9 @@ persist.vendor.hifills.          u:object_r:vendor_camera_prop:s0
 persist.vendor.dualCam.          u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.           u:object_r:vendor_camera_prop:s0
 vendor.hal.camera.               u:object_r:vendor_camera_prop:s0
+
+# BLUETOOTH #
+vendor.bluetooth_fw_ver	u:object_r:vendor_bluetooth_prop:s0
 
 # FACTORY #
 ro.factory.factory_binary  u:object_r:vendor_factory_prop:s0
@@ -18,12 +23,6 @@ dev.gnss.		    u:object_r:vendor_gps_prop:s0
 
 # HWC #
 hwc.exynos.vsync_mode      u:object_r:vendor_hwc_prop:s0
-
-# PERSIST #
-persist.rmnet.             u:object_r:persist_rmnet_prop:s0
-persist.data.df.           u:object_r:persist_data_df_prop:s0
-persist.data.wda.          u:object_r:persist_data_wda_prop:s0
-persist.radio.multisim.    u:object_r:persist_radio_prop:s0
 
 # RADIO #
 ro.radio.needcalibration   u:object_r:vendor_radio_prop:s0

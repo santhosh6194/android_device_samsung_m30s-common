@@ -1,74 +1,84 @@
 ### DATA ###
-/data/camera(/.*)?                           u:object_r:camera_data_file:s0
-/data/exynos(/.*)?                           u:object_r:exynos_data_file:s0
 /data/vendor/camera(/.*)?                    u:object_r:camera_vendor_data_file:s0
 /data/vendor/display(/.*)?                   u:object_r:display_vendor_data_file:s0
 /data/vendor/media(/.*)?                     u:object_r:media_vendor_data_file:s0
 /data/vendor/mediadrm(/.*)?                  u:object_r:mediadrm_vendor_data_file:s0
+/data/camera(/.*)?                           u:object_r:camera_data_file:s0
+/data/exynos(/.*)?			     u:object_r:exynos_data_file:s0
 
 ### DEV ###
 /dev/block/platform/.+/by-name/cpefs         u:object_r:cpefs_block_device:s0
-/dev/radio0                                  u:object_r:fm_radio_device:s0
 
-# BLUETOOTH #
+# Bluetooth #
 /dev/scsc_h4_0                               u:object_r:bt_device:s0
 
-# CAMERA #
+# Camera #
 /dev/m2m1shot_scaler0                        u:object_r:m2m1shot_device:s0
+
+# Geotrans #
+/dev/video155                                u:object_r:geotrans_device:s0
 
 # GPS #
 /dev/gnss_ipc                                u:object_r:gnss_device:s0
 
-# GRAPHICS #
+# Graphics #
 /dev/mali[0-9]                               u:object_r:gpu_device:s0
 /dev/g2d                                     u:object_r:graphics_device:s0
 
-# SECMEM #
+# Input #
+/dev/input/event[0-9]			     u:object_r:input_device:s0
+
+# Secmem #
 /dev/s5p-smem                                u:object_r:secmem_device:s0
+
+# Serial #
+/dev/ttyGS[0-9]*                             u:object_r:serial_device:s0
+
+# USB #
+/dev/android_ssusbcon                        u:object_r:usb_device:s0
+/dev/usb-ffs(/.*)?                           u:object_r:usb_device:s0
+/dev/usb_mtp_gadget                          u:object_r:mtp_device:s0
 
 # ZRAM #
 /dev/block/zram0                             u:object_r:swap_block_device:s0
 
-### ROOT ###
-/carrier(/.*)?                               u:object_r:carrier_file:s0
-/omr(/.*)?                                   u:object_r:omr_file:s0
-/spu(/.*)?                                   u:object_r:spu_file:s0
-
 ### SYSFS ###
-# BLOCK #
+
+# argos #
+/sys/devices/platform/argos(/.*)?            u:object_r:sysfs_argos:s0
+
+# Block #
 /sys/devices/platform/13520000.ufs/host0/target0:0:0/0:0:0:[0-4]/block/sd[a-e]/queue/scheduler  u:object_r:sysfs_io_sched_tuneable:s0
 /sys/devices/platform/13550000.dwmmc2/mmc_host/mmc0/mmc0:aaaa/block/mmcblk0/queue/scheduler     u:object_r:sysfs_io_sched_tuneable:s0
 
-# CAMERA #
-/sys/devices/virtual/camera/flash/rear_flash                  u:object_r:sysfs_camera_writable:s0
-/sys/devices/virtual/camera/rear/fw_update                    u:object_r:sysfs_camera_writable:s0
-/sys/devices/virtual/camera/rear/ssrm_camera_info             u:object_r:sysfs_camera_writable:s0
-/sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
-
-# GPS #
-/sys/devices/soc0/machine                                     u:object_r:sysfs_sec_gps:s0
-/sys/devices/soc0/revision                                    u:object_r:sysfs_sec_gps:s0
-
-# NET #
+# Net #
 /sys/devices/platform/119c0000.scsc_wifibt/net(/.*)/mtu       u:object_r:sysfs_net_mtu_writable:s0
 /sys/devices/virtual/net(/.*)/mtu                             u:object_r:sysfs_net_mtu_writable:s0
 
-# SENSORS #
+# Sensors #
 /sys/devices/platform/11980000.contexthub(/.*)                u:object_r:sysfs_iio:s0
 /sys/devices/platform/11c30000.adc(/.*)                       u:object_r:sysfs_iio:s0
 /sys/devices/platform/11980000.contexthub(/.*)/buffer/enable  u:object_r:sysfs_sensors_writable:s0
 /sys/devices/platform/11980000.contexthub(/.*)/buffer/length  u:object_r:sysfs_sensors_writable:s0
 
+# GPS #
+/sys/devices/soc0/machine                                     u:object_r:sysfs_sec_gps:s0
+/sys/devices/soc0/revision                                    u:object_r:sysfs_sec_gps:s0
+
 ### VENDOR ###
-/(vendor|system/vendor)/bin/wlbtd            								u:object_r:wlbtd_exec:s0
-/(vendor|system/vendor)/bin/hw/gps.sh        								u:object_r:gpsd_exec:s0
-/(vendor|system/vendor)/bin/hw/gpsd          								u:object_r:gpsd_exec:s0
-/(vendor|system/vendor)/bin/hw/macloader     								u:object_r:macloader_exec:s0
+
+/(vendor|system/vendor)/bin/argosd								    u:object_r:argosd_exec:s0
+/(vendor|system/vendor)/bin/wlbtd            							    u:object_r:wlbtd_exec:s0
+/(vendor|system/vendor)/bin/vendor\.samsung\.hardware\.security\.widevine\.keyprov@[0-9]\.[0-9]-service    u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/gps.sh        							    u:object_r:gpsd_exec:s0
+/(vendor|system/vendor)/bin/hw/gpsd          							    u:object_r:gpsd_exec:s0
+/(vendor|system/vendor)/bin/hw/macloader     							    u:object_r:macloader_exec:s0
+/(vendor|system/vendor)/bin/hw/mfgloader     							    u:object_r:mfgloader_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.clearkey                u:object_r:hal_drm_clearkey_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.widevine                u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]-service\.samsung           u:object_r:hal_keymaster_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.camera\.provider@[0-9]\.[0-9]-service     u:object_r:hal_camera_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.gnss@[0-9]\.[0-9]-service                 u:object_r:hal_gnss_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.camera\.provider@[0-9]\.[0-9]-service     u:object_r:hal_camera_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.vibrator@[0-9]\.[0-9]-service             u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/lib(64)?/hw/gralloc\.exynos[0-9]*\.so                                       u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib(64)?/libion_exynos\.so                                                  u:object_r:same_process_hal_file:s0

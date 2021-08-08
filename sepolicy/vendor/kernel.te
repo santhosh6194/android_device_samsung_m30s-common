@@ -1,12 +1,14 @@
 # kernel.te
-
+allow kernel self:capability { sys_admin };
 allow kernel self:capability mknod;
 
 allow kernel device:dir { add_name write remove_name rmdir };
 allow kernel device:chr_file { create setattr getattr unlink };
 
-r_dir_file(kernel, efs_file);
-r_dir_file(kernel, app_efs_file);
+dontaudit kernel device:blk_file { create };
 
-allow kernel app_efs_file:file write;
+allow kernel efs_file:dir rw_dir_perms;
+allow kernel app_efs_file:dir r_dir_perms;
+allow kernel app_efs_file:file { create rw_file_perms };
+
 allow kernel block_device:dir search;

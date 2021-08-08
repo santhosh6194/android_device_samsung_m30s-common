@@ -1,4 +1,8 @@
 # vold.te
 
+allow vold cgroup:file { getattr };
+allow vold debugfs_trace_marker:file { getattr };
 allow vold efs_file:dir r_file_perms;
 allow vold mnt_vendor_file:dir r_file_perms;
+allow vold sysfs_mmc_host_writable:file rw_file_perms;
+allow vold sysfs_scsi_host_writable:file rw_file_perms;
