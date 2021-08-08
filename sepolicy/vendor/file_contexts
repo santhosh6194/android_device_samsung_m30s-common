@@ -8,7 +8,6 @@
 
 ### DEV ###
 /dev/block/platform/.+/by-name/cpefs         u:object_r:cpefs_block_device:s0
-/dev/radio0                                  u:object_r:fm_radio_device:s0
 
 # Bluetooth #
 /dev/scsc_h4_0                               u:object_r:bt_device:s0
